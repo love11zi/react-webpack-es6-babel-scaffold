@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+/**
+ * 用于M站NGBOSS自驾项目的基础样式,包含变量,函数和mixin等,需要import使用,可以import多次
+ */
+
+/**
+ * 变量声明
+ */
+
+$bgColor: #f0f0f0;
+
+$greenColor: #28bf5d;
+$orangeColor: #ff7800;
+$pinkColor: #ff7c70;
+$yellowColor: #f99d1c;
+$fontColor: #666;
+$strongColor: #222;
+$weakColor: #999;
+$warningColor: #f45b4d;
+
+
+$borderColor: #ddd;
+$lightBorderColor: #eee;
+$darkBorderColor: #d4d4d4;
+
+$iconColor: #33bd61;
+
+$buttonColor: #ff7c70;
+$buttonActivedColor: #ffa39b;
+$buttonDisabledColor: #ccc;
+
+
+
+/**
+ * mixin
+ */
+@mixin ellipsis(){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin clearfix(){
+    &:after{
+        clear:both;
+    }
+    &:before, &:after{ 
+        content:""; 
+        display:table; 
+    }
+}
+
+@mixin iconfont(){
+  font-family: 'tuniu';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+}
+
+@mixin grayBorder(){
+  border: 1px solid #e0e0e0;
+  background-color: #f5f5f5;
+  border-radius: 2px;
+}
+
+@mixin quarter($n){
+  width: $n * 25%;
+  height: 100%;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin clearSpacing {
+  font-size: 0;
+  *word-spacing:-4px;
+  letter-spacing: -4px;
+  & > * {
+    letter-spacing: normal;
+    word-spacing: normal;
+  }
+}
+
+@mixin transform($transform...) {
+  -webkit-transform: $transform;
+      -ms-transform: $transform;
+          transform: $transform;
+}
+
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+     -moz-transition: $transition;
+          transition: $transition;
+}
+
+@mixin imgLoading($fontsize, $bgcolor: #f0f0f0, $color:#fff){
+    position: relative;
+    background-color: $bgcolor;
+    &:before{
+        @include iconfont();
+        content: "\e800";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        color:$color;
+        font-size: $fontsize;
+    }
+}

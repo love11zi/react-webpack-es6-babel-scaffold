@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+/**
+ * 用于M站NGBOSS自驾项目的常用样式
+ */
+
+.hide{
+  display: none!important;
+}
+
+.clearfix {
+  &:after,
+  &:before {
+      content: "";
+      display: table;
+  }
+  &:after {
+      clear: both;
+      overflow: hidden;
+  }
+}
+
+.hairlines{
+  .thin-border {
+    border-width: 0.5px !important;
+  }
+}
+
