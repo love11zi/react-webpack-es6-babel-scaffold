@@ -50,7 +50,7 @@ class RentTime extends Component {
           <p>
             <em>12月22日</em><span>10:00</span>
           </p>
-          <p>今天</p>
+          <p className="day-alias">今天</p>
         </div>
         <span className="time-range">租期<strong>2</strong>天</span>
         <div className="back-time">
@@ -58,7 +58,7 @@ class RentTime extends Component {
           <p>
             <em>12月24日</em><span>10:00</span>
           </p>
-          <p>后天</p>
+          <p className="day-alias">后天</p>
         </div>
       </div>
     )
@@ -74,6 +74,8 @@ class PickArea extends Component {
     return (
       <div className="pick-area">
         <div className="label">取车区域</div>
+        <h2 data-placeholder="true">机场/火车站/区域/地铁</h2>
+        <span className="arrow-right"></span>
       </div>
     )
   }
@@ -92,6 +94,7 @@ export default class IndexForm extends Component {
         <CurrentPosition />
         <RentTime />
         <PickArea />
+        <a href="javascript:;" className="searchBtn">搜索</a>
       </div>
     )
   }

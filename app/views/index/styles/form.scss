@@ -67,9 +67,6 @@
         border-bottom: solid 1px $borderColor;
         & > div {
             width: 40%;
-            .label {
-                line-height: 22px;
-            }
             p {
                 font-size: 1.2rem;
                 color: $strongColor;
@@ -84,6 +81,9 @@
                 span {
                     font-size: 1.4rem;
                 }
+            }
+            .day-alias {
+                margin: 1px 0;
             }
             &.pick-time {
                 float: left;
@@ -102,6 +102,41 @@
             font-size: 1.2rem;
             color: $orangeColor;
         }
-
+    }
+    .pick-area {
+        position: relative;
+        border-bottom: solid 1px $borderColor;
+        padding: 10px 0 5px;
+        h2 {
+            line-height: 32px;
+            font-size: 1.7rem;
+            color: $strongColor;
+            &[data-placeholder="true"] {
+                color: $weakColor;
+            }
+        }
+        .arrow-right {
+            display: block;
+            position: absolute;
+            right: 3px;
+            top: 50%;
+            width: 8px;
+            height: 8px;
+            transform: translateY(-50%) rotate(45deg);
+            border-top: solid 1px $borderColor;
+            border-right: solid 1px $borderColor;
+        }
+    }
+    .searchBtn   {
+        display: block;
+        margin-top: 20px;
+        width: 100%;
+        height: 40px;
+        background: $orangeColor;
+        color: #fff;
+        text-align: center;
+        font-size: 1.4rem;
+        line-height: 40px;
+        border-radius: 4px;
     }
 }
