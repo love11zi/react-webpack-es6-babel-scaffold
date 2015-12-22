@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+
+@import "../../assets/styles/common/variable";
+@import "../../assets/styles/common/base";
+
+
+.indexFormContainer {
+    position: relative;
+    padding: 0 10px;
+    background: #fff;
+    .label {
+        line-height: 22px;
+        font-size: 1.2rem;
+        color: $weakColor;
+    }
+
+    .rent-city {
+        border-bottom: solid 1px $borderColor;
+        padding-right: 106px;
+        & > div {
+            @include clearfix();
+            height: 50px;
+            line-height: 50px;
+            &:first-child {
+                border-bottom: solid 1px $borderColor;
+            }
+        }
+        .label {
+            position: relative;
+            float: left;
+            margin-right: 8px;
+            margin-top: 10px;
+        }
+        h2 {
+            font-size: 1.7rem;
+            color: $strongColor;
+            &[data-placeholder="true"] {
+                color: $weakColor;
+            }
+        }
+    }
+    .current-position {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 106px;
+        height: 60px;
+        padding: 21px 0 20px;
+        text-align: center;
+        cursor: pointer;
+        i {
+            display: inline-block;
+            color: $iconColor;
+            font-size: 2.0rem;
+            margin: 0 auto 5px;
+        }
+        h3 {
+            font-size: 1.4rem;
+            color: $fontColor;
+        }
+    }
+    .rent-time {
+        @include clearfix();
+        position: relative;
+        padding: 10px 0;
+        border-bottom: solid 1px $borderColor;
+        & > div {
+            width: 40%;
+            .label {
+                line-height: 22px;
+            }
+            p {
+                font-size: 1.2rem;
+                color: $strongColor;
+                line-height: 1.6;
+                &[data-placeholder="true"] {
+                    color: $weakColor;
+                }
+                em {
+                    font-size: 1.7rem;
+                    margin-right: 3px;
+                }
+                span {
+                    font-size: 1.4rem;
+                }
+            }
+            &.pick-time {
+                float: left;
+                text-align: left;
+            }
+            &.back-time {
+                float: right;
+                text-align: right;
+            }
+        }
+        .time-range {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            font-size: 1.2rem;
+            color: $orangeColor;
+        }
+
+    }
+}

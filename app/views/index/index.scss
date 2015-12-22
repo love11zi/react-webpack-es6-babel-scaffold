@@ -10,6 +10,6 @@
 @import "../../assets/styles/common/variable";
 @import "../../assets/styles/common/base";
 
-body {
-	font-size: 20px;
-}
+@import "./styles/header.scss";
+@import "./styles/form.scss";
+

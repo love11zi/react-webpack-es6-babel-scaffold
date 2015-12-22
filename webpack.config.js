@@ -103,6 +103,6 @@ module.exports = {
 
         // new webpack.NoErrorsPlugin(),
 
-        new ExtractTextPlugin('styles.css')
+        new ExtractTextPlugin('font.css')
     ]
 };
